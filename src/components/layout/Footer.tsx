@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Github, Linkedin, Twitter, Instagram, Mail } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const footerLinks = [
   {
@@ -42,23 +42,16 @@ export default function Footer() {
                 DEV<span className="text-accent group-hover:text-white transition-colors duration-500">SHUTTLE</span>
               </span>
             </Link>
-            
+
             <p className="text-xl text-brand-gray-500 max-w-md mb-12 leading-relaxed">
-              An engineering-led digital agency building premium websites, scalable web applications, and modern mobile apps for startups and brands.
+              A premium software agency building modern websites, scalable web applications, and mobile applications for startups and growing businesses.
             </p>
-            
-            <div className="flex flex-col gap-6 mb-12">
-               <a href="mailto:niyazasghar12@gmail.com" className="text-white hover:text-accent transition-colors font-bold flex items-center gap-3 group">
-                  <Mail className="w-5 h-5 text-accent" />
-                  <span className="hover-line">niyazasghar12@gmail.com</span>
-               </a>
-            </div>
 
             <div className="flex gap-4">
               {[Twitter, Linkedin, Github, Instagram].map((Icon, idx) => (
-                <a 
+                <a
                   key={idx}
-                  href="#" 
+                  href="#"
                   className="w-12 h-12 flex items-center justify-center border border-white/10 rounded-full hover:bg-accent hover:border-accent hover:text-white transition-all duration-500 group"
                 >
                   <Icon className="w-5 h-5 transition-transform group-hover:scale-110" />
@@ -102,7 +95,7 @@ export default function Footer() {
               Engineering-led. Founded by IIIT Graduate Software Architect.
             </p>
           </div>
-          
+
           <div className="flex items-center gap-12 text-xs uppercase tracking-widest text-brand-gray-500 font-bold">
             <span className="cursor-default hover:text-white transition-colors">Performance</span>
             <span className="cursor-default hover:text-white transition-colors">Security</span>

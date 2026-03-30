@@ -52,7 +52,7 @@ export function TextReveal({
       initial="hidden"
       whileInView="visible"
       viewport={{ once }}
-      className={`inline-block overflow-hidden pb-1 ${className}`}
+      className={`inline-block overflow-hidden ${className}`}
     >
       {words.map((word, i) => (
         <span key={i} className="inline-block overflow-hidden mr-[0.25em]">

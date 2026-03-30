@@ -50,21 +50,21 @@ export default function Hero() {
           animate="visible"
           className="max-w-6xl"
         >
-          <motion.div variants={itemVariants} className="mb-8">
+          <motion.div variants={itemVariants} className="mb-6">
             <span className="eyebrow">
               ENGINEERING-LED SOFTWARE STUDIO
             </span>
           </motion.div>
 
-          <h1 className="text-hero mb-10 text-white leading-tight">
-             <TextReveal delay={0.1}>Designing and building modern websites</TextReveal> <br />
-             <TextReveal delay={0.4} className="text-brand-gray-700">and scalable web applications.</TextReveal>
+          <h1 className="text-hero mb-12 text-white leading-[1.05] tracking-[-0.04em]">
+            <TextReveal delay={0.1}>Designing and building modern websites</TextReveal> <br />
+            <TextReveal delay={0.4} className="text-brand-gray-700">and scalable web applications.</TextReveal>
           </h1>
 
-          <div className="text-xl md:text-3xl text-brand-gray-400 max-w-4xl mb-14 leading-[1.6] font-light text-balance">
-             <TextReveal delay={0.6} wordStagger={0.02}>
-                We help startups and growing businesses launch high-performance websites, SaaS MVPs, dashboards, and client-facing platforms with clean design, reliable architecture, and production-ready development.
-             </TextReveal>
+          <div className="text-xl md:text-3xl text-brand-gray-400 max-w-4xl mb-16 leading-[1.6] font-light text-balance">
+            <TextReveal delay={0.6} wordStagger={0.02}>
+              We help startups and growing businesses launch high-performance websites, SaaS MVPs, dashboards, and client-facing platforms with clean design, reliable architecture, and production-ready development.
+            </TextReveal>
           </div>
 
           <motion.div
@@ -84,7 +84,7 @@ export default function Hero() {
 
           <motion.div
             variants={itemVariants}
-            className="mt-28 py-10 border-t border-white/5 flex flex-wrap items-center gap-x-16 gap-y-10"
+            className="mt-32 py-10 border-t border-white/5 flex flex-wrap items-center gap-x-16 gap-y-10"
           >
             <div className="flex items-center gap-5">
               <div className="p-3 bg-white/5 rounded-xl border border-white/10 group hover:border-accent/40 transition-colors">

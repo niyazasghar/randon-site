@@ -1,0 +1,20 @@
+
+> devshuttle-agency@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 4.5s
+  Running TypeScript ...
+Failed to type check.
+
+./playwright-fixture.ts:3:30
+Type error: Cannot find module 'lovable-agent-playwright-config/fixture' or its corresponding type declarations.
+
+  1 | // Re-export the base fixture from the package
+  2 | // Override or extend test/expect here if needed
+> 3 | export { test, expect } from "lovable-agent-playwright-config/fixture";
+    |                              ^
+  4 |
+Next.js build worker exited with code: 1 and signal: null
