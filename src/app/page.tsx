@@ -3,7 +3,7 @@ import FeaturedWork from "@/components/home/FeaturedWork";
 import WhatWeBuild from "@/components/home/WhatWeBuild";
 import TechStack from "@/components/home/TechStack";
 import FAQ from "@/components/home/FAQ";
-import CTASection from "@/components/home/CTASection";
+import ContactSection from "@/components/home/ContactSection";
 
 export default function Home() {
   return (
@@ -36,7 +36,7 @@ export default function Home() {
       <WhatWeBuild />
       <TechStack />
       <FAQ />
-      <CTASection />
+      <ContactSection />
     </div>
   );
 }

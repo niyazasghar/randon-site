@@ -119,8 +119,8 @@ export default function Navbar() {
             <div className="flex flex-col md:flex-row justify-between items-end gap-10">
               <div className="flex flex-col gap-4">
                 <p className="eyebrow !mb-2 opacity-50">Get in touch</p>
-                <a href="mailto:hello@devshuttle.com" className="text-2xl md:text-3xl font-bold border-b border-accent pb-2 w-fit hover:pr-4 transition-all">
-                  hello@devshuttle.com
+                <a href="mailto:niyazasghar12@gmail.com" className="text-2xl md:text-3xl font-bold border-b border-accent pb-2 w-fit hover:pr-4 transition-all">
+                  niyazasghar12@gmail.com
                 </a>
               </div>
               

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Twitter, Instagram, Mail } from "lucide-react";
 
 const footerLinks = [
   {
@@ -44,9 +44,16 @@ export default function Footer() {
             </Link>
             
             <p className="text-xl text-brand-gray-500 max-w-md mb-12 leading-relaxed">
-              A premium software agency building modern websites, scalable web applications, and mobile applications for startups and growing businesses.
+              An engineering-led digital agency building premium websites, scalable web applications, and modern mobile apps for startups and brands.
             </p>
             
+            <div className="flex flex-col gap-6 mb-12">
+               <a href="mailto:niyazasghar12@gmail.com" className="text-white hover:text-accent transition-colors font-bold flex items-center gap-3 group">
+                  <Mail className="w-5 h-5 text-accent" />
+                  <span className="hover-line">niyazasghar12@gmail.com</span>
+               </a>
+            </div>
+
             <div className="flex gap-4">
               {[Twitter, Linkedin, Github, Instagram].map((Icon, idx) => (
                 <a 
