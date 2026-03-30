@@ -1,0 +1,22 @@
+
+> devshuttle-agency@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 4.9s
+  Running TypeScript ...
+Failed to type check.
+
+./src/components/FeaturedWork.tsx:45:17
+Type error: Type 'StaticImageData' is not assignable to type 'string | Blob'.
+
+  43 |             <div className="overflow-hidden mb-5">
+  44 |               <img
+> 45 |                 src={project.image}
+     |                 ^
+  46 |                 alt={`${project.name} project`}
+  47 |                 loading="lazy"
+  48 |                 width={840}
+Next.js build worker exited with code: 1 and signal: null

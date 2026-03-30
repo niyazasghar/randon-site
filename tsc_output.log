@@ -1,0 +1,2 @@
+src/hooks/use-toast.ts(3,53): error TS2307: Cannot find module '@/components/ui/toast' or its corresponding type declarations.
+src/test/example.test.ts(1,38): error TS2307: Cannot find module 'vitest' or its corresponding type declarations.

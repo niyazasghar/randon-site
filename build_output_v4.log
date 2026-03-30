@@ -1,0 +1,21 @@
+
+> devshuttle-agency@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 4.3s
+  Running TypeScript ...
+Failed to type check.
+
+./src/components/ui/accordion.tsx:2:37
+Type error: Cannot find module '@radix-ui/react-accordion' or its corresponding type declarations.
+
+  1 | import * as React from "react";
+> 2 | import * as AccordionPrimitive from "@radix-ui/react-accordion";
+    |                                     ^
+  3 | import { ChevronDown } from "lucide-react";
+  4 |
+  5 | import { cn } from "@/lib/utils";
+Next.js build worker exited with code: 1 and signal: null

@@ -1,0 +1,44 @@
+
+> devshuttle-agency@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 3.8s
+  Running TypeScript ...
+  Finished TypeScript in 3.6s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/20) ...
+  Generating static pages using 15 workers (5/20) 
+  Generating static pages using 15 workers (10/20) 
+  Generating static pages using 15 workers (15/20) 
+Γ£ô Generating static pages using 15 workers (20/20) in 930ms
+  Finalizing page optimization ...
+
+Route (app)
+Γöî Γùï /
+Γö£ Γùï /_not-found
+Γö£ Γùï /about
+Γö£ Γùï /blog
+Γö£ ╞Æ /blog/[slug]
+Γö£ Γùï /case-studies
+Γö£ Γùï /contact
+Γö£ Γùï /custom-development
+Γö£ Γùï /packages
+Γö£ Γùï /privacy
+Γö£ Γùï /process
+Γö£ Γùï /refund
+Γö£ Γùï /services
+Γö£ Γùï /solutions
+Γö£ Γùï /solutions/food-delivery
+Γö£ Γùï /solutions/grocery-marketplace
+Γö£ Γùï /solutions/pharmacy-software
+Γö£ Γùï /solutions/prebuilt
+Γö£ Γùï /terms
+Γöö Γùï /work
+
+
+Γùï  (Static)   prerendered as static content
+╞Æ  (Dynamic)  server-rendered on demand
+

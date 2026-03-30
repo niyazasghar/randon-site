@@ -1,0 +1,22 @@
+
+> devshuttle-agency@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 3.9s
+  Running TypeScript ...
+Failed to type check.
+
+./src/hooks/use-toast.ts:3:53
+Type error: Cannot find module '@/components/ui/toast' or its corresponding type declarations.
+
+  1 | import * as React from "react";
+  2 |
+> 3 | import type { ToastActionElement, ToastProps } from "@/components/ui/toast";
+    |                                                     ^
+  4 |
+  5 | const TOAST_LIMIT = 1;
+  6 | const TOAST_REMOVE_DELAY = 1000000;
+Next.js build worker exited with code: 1 and signal: null
