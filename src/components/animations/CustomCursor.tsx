@@ -1,0 +1,104 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+
+export default function CustomCursor() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+
+  // Mouse position
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  // Smooth springs for the outer circle to create the trailing effect
+  const springConfig = { damping: 25, stiffness: 250, mass: 0.5 };
+  const cursorXSpring = useSpring(mouseX, springConfig);
+  const cursorYSpring = useSpring(mouseY, springConfig);
+
+  useEffect(() => {
+    const moveCursor = (e: MouseEvent) => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+      if (!isVisible) setIsVisible(true);
+    };
+
+    const handleMouseLeave = () => setIsVisible(false);
+    const handleMouseEnter = () => setIsVisible(true);
+
+    // Add visual feedback when hovering over interactive elements
+    const handleElementMouseEnter = () => setIsHovering(true);
+    const handleElementMouseLeave = () => setIsHovering(false);
+
+    window.addEventListener("mousemove", moveCursor);
+    document.body.addEventListener("mouseleave", handleMouseLeave);
+    document.body.addEventListener("mouseenter", handleMouseEnter);
+
+    const interactiveElements = document.querySelectorAll(
+      "a, button, input, select, textarea, [role='button']"
+    );
+    
+    interactiveElements.forEach((el) => {
+      el.addEventListener("mouseenter", handleElementMouseEnter);
+      el.addEventListener("mouseleave", handleElementMouseLeave);
+    });
+
+    return () => {
+      window.removeEventListener("mousemove", moveCursor);
+      document.body.removeEventListener("mouseleave", handleMouseLeave);
+      document.body.removeEventListener("mouseenter", handleMouseEnter);
+      
+      interactiveElements.forEach((el) => {
+        el.removeEventListener("mouseenter", handleElementMouseEnter);
+        el.removeEventListener("mouseleave", handleElementMouseLeave);
+      });
+    };
+  }, [mouseX, mouseY, isVisible]);
+
+  // If running on a touch device, don't render the custom cursor
+  if (typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches) {
+    return null;
+  }
+
+  return (
+    <div className="hidden lg:block">
+      {/* Outer Circle (Trailing) */}
+      <motion.div
+        className="fixed top-0 left-0 rounded-full border border-white/20 pointer-events-none z-[9999] flex items-center justify-center"
+        initial={{
+          width: 48,
+          height: 48,
+          backgroundColor: "rgba(255, 255, 255, 0)"
+        }}
+        animate={{
+          width: isHovering ? 64 : 48,
+          height: isHovering ? 64 : 48,
+          backgroundColor: isHovering ? "rgba(255, 255, 255, 0.05)" : "rgba(255, 255, 255, 0)",
+        }}
+        style={{
+          x: mouseX,
+          y: mouseY,
+          translateX: "-50%",
+          translateY: "-50%",
+          opacity: isVisible ? 1 : 0,
+        }}
+      />
+      
+      {/* Inner Dot (Exact pointer) */}
+      <motion.div
+        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-accent pointer-events-none z-[10000]"
+        animate={{
+          scale: isHovering ? 0 : 1,
+          opacity: isHovering ? 0 : 1,
+        }}
+        style={{
+          x: mouseX,
+          y: mouseY,
+          translateX: "-50%",
+          translateY: "-50%",
+          opacity: isVisible ? 1 : 0,
+        }}
+      />
+    </div>
+  );
+}
