@@ -48,6 +48,8 @@ const config: Config = {
       animation: {
         'reveal': 'reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         'fade-in': 'fade-in 0.6s ease-out forwards',
+        'marquee-left': 'marquee-left 30s linear infinite',
+        'marquee-right': 'marquee-right 30s linear infinite',
       },
       keyframes: {
         reveal: {
@@ -57,6 +59,14 @@ const config: Config = {
         'fade-in': {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        'marquee-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'marquee-right': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
         },
       },
     },

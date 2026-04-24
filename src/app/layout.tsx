@@ -40,6 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${plusJakarta.variable} ${montserrat.variable} bg-background-dark text-white antialiased`}>
+        <div className="fixed inset-0 z-[-1] bg-grid-white pointer-events-none" />
         <CustomCursor />
         <SmoothScroll>
           <Navbar />

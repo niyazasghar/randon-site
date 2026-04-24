@@ -1,18 +1,36 @@
 import Hero from "@/components/home/Hero";
 import FeaturedWork from "@/components/home/FeaturedWork";
+import ProofOfWork from "@/components/home/ProofOfWork";
 import WhatWeBuild from "@/components/home/WhatWeBuild";
 import TechStack from "@/components/home/TechStack";
 import FAQ from "@/components/home/FAQ";
 import ContactSection from "@/components/home/ContactSection";
+import Testimonials from "@/components/home/Testimonials";
+import OurTeam from "@/components/home/OurTeam";
+import WhatWedo from "@/components/home/WhatWedo";
+
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-background-dark overflow-hidden">
+    <div className="flex flex-col overflow-hidden">
       <Hero />
       <FeaturedWork />
+      <WhatWedo/>
+      <ProofOfWork />
+      <Testimonials/>
+      <OurTeam/>
+      <FAQ />
+      {/* <WhatWeBuild /> */}
+      {/* <TechStack /> */}
       
-      {/* Studio Positioning Section */}
-      <section className="bg-background-dark border-t border-white/5 relative z-10 py-32 lg:py-56">
+      <ContactSection />
+    </div>
+  );
+}
+
+
+ {/* Studio Positioning Section */}
+      {/* <section className="bg-background-dark border-t border-white/5 relative z-10 py-32 lg:py-56">
          <div className="container-wide grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <h2 className="text-section-title text-white">
                Engineering-Led. <br />
@@ -31,12 +49,4 @@ export default function Home() {
                </p>
             </div>
          </div>
-      </section>
-
-      <WhatWeBuild />
-      <TechStack />
-      <FAQ />
-      <ContactSection />
-    </div>
-  );
-}
+      </section> */}

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -11,7 +11,17 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-const navLinks = [
+const leftLinks = [
+  { name: "Services", href: "/services" },
+  { name: "Solutions", href: "/solutions" },
+];
+
+const rightLinks = [
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
+];
+
+const allLinks = [
   { name: "Services", href: "/services" },
   { name: "Solutions", href: "/solutions" },
   { name: "Process", href: "/process" },
@@ -44,48 +54,62 @@ export default function Navbar() {
   }, [isMobileMenuOpen]);
 
   return (
-    <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ease-in-out",
-        isScrolled ? "py-4 glass-nav" : "py-8 bg-transparent"
-      )}
-    >
-      <div className="container-wide flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="group flex items-center gap-2">
-          <span className="text-2xl font-display font-extrabold tracking-tighter">
-            DEV<span className="text-accent transition-colors group-hover:text-white">SHUTTLE</span>
-          </span>
-        </Link>
-
-        {/* Desktop Nav Links */}
-        <div className="hidden lg:flex items-center gap-12">
-          {navLinks.map((link) => (
+    <nav className="fixed top-0 left-0 right-0 z-[100] flex justify-center">
+      {/* Centered pill navbar */}
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className={cn(
+          "mt-4 px-2 py-2 rounded-full border transition-all duration-700 ease-in-out flex items-center",
+          isScrolled
+            ? "bg-background-dark/80 backdrop-blur-xl border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
+            : "bg-background-dark/40 backdrop-blur-md border-white/20"
+        )}
+      >
+        {/* Left Links */}
+        <div className="hidden lg:flex items-center gap-1">
+          {leftLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-[11px] font-bold tracking-[0.2em] uppercase text-brand-gray-400 hover:text-white transition-colors duration-300"
+              className="relative px-5 py-2.5 text-[12px] font-medium tracking-[0.08em] uppercase text-brand-gray-400 hover:text-white transition-colors duration-300 rounded-full hover:bg-white/[0.04]"
             >
               {link.name}
             </Link>
           ))}
-          
-          <Link href="/contact" className="btn-premium py-2.5 px-7">
-            <span className="text-[10px] uppercase font-bold tracking-widest text-white">Book a Discovery Call</span>
-            <ArrowUpRight className="w-4 h-4 text-white/50" />
-          </Link>
         </div>
 
-        {/* Mobile Menu Button - Circular like Baunfire */}
+        {/* Center Logo */}
+        <Link href="/" className="group flex items-center mx-6 lg:mx-8 px-4 py-1.5">
+          <span className="text-xl font-display font-extrabold tracking-tighter whitespace-nowrap">
+            DEV<span className="text-accent transition-colors duration-300 group-hover:text-white">SHUTTLE</span>
+          </span>
+        </Link>
+
+        {/* Right Links */}
+        <div className="hidden lg:flex items-center gap-1">
+          {rightLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="relative px-5 py-2.5 text-[12px] font-medium tracking-[0.08em] uppercase text-brand-gray-400 hover:text-white transition-colors duration-300 rounded-full hover:bg-white/[0.04]"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+
+        {/* Mobile Menu Button */}
         <button
-          className="lg:hidden w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all duration-300"
+          className="lg:hidden w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-all duration-300"
           onClick={() => setIsMobileMenuOpen(true)}
         >
-          <Menu className="w-6 h-6 text-white" />
+          <Menu className="w-5 h-5 text-white" />
         </button>
-      </div>
+      </motion.div>
 
-      {/* Mobile Menu Overlay - Full Screen with Stagged Links */}
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -109,7 +133,7 @@ export default function Navbar() {
               </div>
 
               <div className="flex flex-col gap-6 md:gap-10">
-                {navLinks.map((link, idx) => (
+                {allLinks.map((link, idx) => (
                   <motion.div
                     key={link.name}
                     initial={{ opacity: 0, y: 30 }}
