@@ -33,7 +33,7 @@ export default function FAQ() {
   return (
     <section className="bg-background-light py-32 lg:py-56 relative z-10">
       <div className="container-wide">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="mb-24 text-center lg:text-left transition-all">
             <span className="eyebrow !text-accent/60">Common Questions</span>
             <h2 className="text-section-title text-brand-gray-900 !leading-none mb-10">

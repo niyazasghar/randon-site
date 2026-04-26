@@ -1,89 +1,209 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
+import CommonCard from "@/components/CommonCard";
 
 const allProjects = [
-  { name: "Nextera", type: "Corporate Website", tags: ["UX Design", "Development"], image: project1 },
-  { name: "FinVault", type: "SaaS Platform", tags: ["Product Design", "Branding"], image: project2 },
-  { name: "MediCore", type: "Corporate Website", tags: ["Strategy", "Development"], image: project3 },
-  { name: "RoboSync", type: "Product Website", tags: ["Creative Direction", "UI/UX"], image: project4 },
-  { name: "CloudPeak", type: "Dashboard", tags: ["Data Visualization", "UX"], image: project1 },
-  { name: "TradeFlow", type: "Fintech App", tags: ["Mobile Design", "Development"], image: project2 },
+  {
+    name: "Nextera",
+    subtitle: "Corporate Website",
+    image: "/assets/project-1.jpg",
+    href: "#",
+    tags: ["UX Design", "Development"],
+  },
+  {
+    name: "FinVault",
+    subtitle: "SaaS Platform",
+    image: "/assets/project-2.jpg",
+    href: "#",
+    tags: ["Product Design", "Branding"],
+  },
+  {
+    name: "MediCore",
+    subtitle: "Corporate Website",
+    image: "/assets/project-3.jpg",
+    href: "#",
+    tags: ["Strategy", "Development"],
+  },
+  {
+    name: "RoboSync",
+    subtitle: "Product Website",
+    image: "/assets/project-4.jpg",
+    href: "#",
+    tags: ["Creative Direction", "UI/UX"],
+  },
+  {
+    name: "CloudPeak",
+    subtitle: "Dashboard",
+    image: "/assets/project-1.jpg",
+    href: "#",
+    tags: ["Data Visualization", "UX"],
+  },
+  {
+    name: "TradeFlow",
+    subtitle: "Fintech App",
+    image: "/assets/project-2.jpg",
+    href: "#",
+    tags: ["Mobile Design", "Development"],
+  },
 ];
 
 export default function WorkPage() {
   return (
-    <div className="min-h-screen bg-background-dark pt-32 pb-16 md:pt-48 md:pb-20">
-      <section className="container-wide mb-16 md:mb-24">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="eyebrow mb-6"
+    <div className="min-h-screen bg-background-light text-primary-dark">
+      {/* Hero Section */}
+      <section className="container-wide pt-36 md:pt-48 pb-20 md:pb-32 relative overflow-hidden">
+        <div className="flex flex-col lg:flex-row lg:items-end gap-12 lg:gap-24">
+          {/* Left: Eyebrow + Heading */}
+          <div className="lg:w-7/12">
+            <motion.span
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              className="inline-block text-accent font-bold tracking-[0.25em] text-[10px] uppercase mb-8"
+            >
+              Case Studies
+            </motion.span>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="text-[clamp(2.5rem,7vw,5.5rem)] font-bold leading-[1] tracking-tighter font-display text-primary-dark"
+            >
+              Some of our <br />
+              finest work.
+            </motion.h1>
+          </div>
+
+          {/* Right: Description */}
+          <div className="lg:w-5/12">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="text-brand-gray-500 text-base md:text-lg leading-relaxed max-w-sm"
+            >
+              Solving diverse business needs through great design and UX.
+            </motion.p>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="w-12 h-[2px] bg-primary-dark/20 mt-6 origin-left"
+            />
+          </div>
+        </div>
+
+        {/* Vertical side text */}
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.15 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2 text-primary-dark text-[10px] font-bold tracking-[0.3em] uppercase [writing-mode:vertical-rl] rotate-180 pointer-events-none"
         >
-          OUR WORK
-        </motion.p>
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="text-hero text-white mb-8 leading-[0.95]"
+          Case Studies
+        </motion.span>
+
+        {/* Decorative dot grid — top right */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.08 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="absolute top-16 right-16 z-0 pointer-events-none"
         >
-          Projects that <br />speak for <span className="text-brand-gray-700">themselves.</span>
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-xl md:text-2xl text-brand-gray-400 font-light max-w-2xl leading-relaxed"
-        >
-          A selection of our recent work across web design, branding, and digital strategy for startups and modern businesses.
-        </motion.p>
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            {Array.from({ length: 100 }).map((_, i) => {
+              const row = Math.floor(i / 10);
+              const col = i % 10;
+              return (
+                <circle
+                  key={i}
+                  cx={col * 12 + 6}
+                  cy={row * 12 + 6}
+                  r="1.5"
+                  fill="currentColor"
+                />
+              );
+            })}
+          </svg>
+        </motion.div>
       </section>
 
-      <section className="container-wide pb-24 md:pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
+      {/* Projects Grid — Offset Masonry Layout */}
+      <section className="container-wide pb-32 md:pb-48">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-12 lg:gap-y-16">
           {allProjects.map((project, i) => (
-            <motion.div
+            <div
               key={`${project.name}-${i}`}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="group cursor-pointer"
+              className={i % 3 === 1 ? "md:mt-16 lg:mt-20" : i % 3 === 2 ? "md:mt-8 lg:mt-10" : ""}
             >
-              <div className="overflow-hidden mb-6 aspect-[4/5] bg-background-surface rounded-sm relative">
-                <Image
-                  src={project.image}
-                  alt={`${project.name} project`}
-                  fill
-                  className="object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 opacity-80 group-hover:opacity-100"
-                />
-              </div>
-              <div className="flex justify-between items-start">
-                <div>
-                    <h3 className="text-xl font-display font-black tracking-tight text-white mb-1 uppercase">
-                    {project.name}
-                    </h3>
-                    <p className="text-sm text-brand-gray-500 font-medium mb-4">{project.type}</p>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-2">
+              <CommonCard
+                title={project.name}
+                subtitle={project.subtitle}
+                image={project.image}
+                href={project.href}
+                delay={i * 0.08}
+              />
+
+              {/* Tags below the card */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.08 + 0.3 }}
+                className="flex flex-wrap gap-2 mt-5 pl-1"
+              >
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-gray-400 border border-white/10 px-3 py-1 bg-white/5"
+                    className="text-[10px] uppercase tracking-[0.15em] font-bold text-brand-gray-400 border border-black/8 px-3 py-1 bg-black/[0.02]"
                   >
                     {tag}
                   </span>
                 ))}
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           ))}
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="border-t border-black/5 py-24 md:py-32">
+        <div className="container-wide text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-brand-gray-500 text-base mb-6"
+          >
+            Interested in working together?
+          </motion.p>
+          <motion.a
+            href="/contact"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="group relative inline-flex items-center gap-3 px-10 py-4 rounded-full text-sm font-bold tracking-wide uppercase overflow-hidden active:scale-[0.98] transition-transform duration-300 bg-primary-dark"
+          >
+            <span className="absolute inset-0 bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out rounded-full" />
+            <span className="relative z-10 text-white">Start a Project</span>
+            <svg
+              className="relative z-10 w-4 h-4 text-white group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </motion.a>
         </div>
       </section>
     </div>

@@ -1,0 +1,62 @@
+Project Overview
+----------------
+Name: devshuttle-agency (DevShuttle)
+Website Title: "DevShuttle | Software Agency"
+Description: DevShuttle is a digital agency focused on building premium websites, scalable web applications, and modern mobile apps for startups and growing businesses.
+Type: Next.js Website / Web Application
+
+Technology Stack
+----------------
+- Framework: Next.js (App Router, version latest)
+- React version: 19 (latest)
+- Styling: Tailwind CSS (v3.3.0)
+- UI Components: Shadcn UI (configured via components.json)
+- Animations: Framer Motion (v12), tailwindcss-animate
+- Smooth Scrolling: Lenis (v1.3.21)
+- Icons: lucide-react
+- Forms & Validation: react-hook-form, zod, @hookform/resolvers
+- Notifications: sonner
+- Typography: Google Fonts (Inter, Plus Jakarta Sans, Montserrat)
+
+Styling & Theming (Tailwind & Globals)
+--------------------------------------
+- Theme: Dark by default.
+- Background Colors:
+  - dark: #0a0a0a (Charcoal/Near-black hero)
+  - light: #fdfdfb
+  - surface: #141414
+- Accent Color: #f05d23 (Copper Red / Deep Coral)
+- Fonts:
+  - Sans: Inter (var(--font-inter))
+  - Display: Plus Jakarta Sans (for Headings, var(--font-plus-jakarta)) and Montserrat
+- Custom classes in globals.css:
+  - .btn-premium: Primary call-to-action styling.
+  - .btn-outline: Secondary call-to-action.
+  - .section-padding, .container-wide: Layout utilities.
+  - .glass-nav: Blurred navigation styling.
+  - Smooth scale and translate properties for hover state interactions.
+
+Directory Structure
+-------------------
+- /src/app: Contains the Next.js app router pages, layouts, and global styles.
+  - /about, /blog, /case-studies, /contact, /custom-development, /packages, /services, /solutions, /work, etc.
+  - layout.tsx: Configures global fonts, smooth scroll wrapping, and Toaster.
+  - page.tsx: Main landing page (integrates Hero, FeaturedWork, WhatWeBuild, TechStack, FAQ, ContactSection).
+  - globals.css: Contains custom Tailwind layer components and raw CSS resets.
+- /src/components: Contains React components.
+  - /home: Hero.tsx, FeaturedWork.tsx, TechStack.tsx, WhatWeBuild.tsx, FAQ.tsx, ContactSection.tsx
+  - /layout: Navbar.tsx, Footer.tsx, SmoothScroll.tsx
+  - /animations: TextReveal.tsx
+  - Shared: NavLink.tsx, PageTransition.tsx, ScrollToTop.tsx, SectionReveal.tsx
+- /src/lib: Utility functions (e.g., utils.ts for tailwind merge).
+- /src/hooks: Custom React hooks (e.g., use-mobile.tsx).
+- /src/assets: Image assets (e.g., project-1.jpg, services-web.jpg, etc.).
+- /public: Static assets (favicon, robots.txt, placeholder images).
+
+Architecture Notes
+------------------
+- Component Architecture: Follows a split between layout components (Navbar/Footer), feature components (home page sections), and UI primitives (shadcn, animations).
+- Animations: Uses framer-motion heavily alongside smooth scrolling via Lenis for a premium user experience and feel. Custom keyframes (reveal, fade-in) are also defined in Tailwind.
+- TypeScript: Fully typed configuration with path aliases (`@/*` mapping to `./src/*`).
+
+This file serves as a comprehensive reference regarding DevShuttle's codebase, structure, styles, and tools to be used as context or skill reference for further development and prompt chaining.
