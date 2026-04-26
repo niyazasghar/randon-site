@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import OurTeam from "@/components/home/OurTeam";
 import { useRef } from "react";
 
 const values = [
@@ -124,6 +125,105 @@ export default function AboutPage() {
         </motion.div>
       </section>
 
+       {/* ─── Section 3: Culture & Values ─── */}
+      <section className="relative py-28 lg:py-40 bg-white">
+        <div className="container-wide relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+
+            {/* Sub-section 1: Shaping the Digital Landscape */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <h2 className="text-[clamp(1.6rem,4vw,2.5rem)] font-extrabold leading-[1.15] tracking-tight font-display text-primary-dark mb-8">
+                Shaping the Digital Landscape
+              </h2>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+                className="text-brand-gray-500 text-[15px] md:text-base leading-[1.85] mb-6"
+              >
+                At DevShuttle, we see technology as a catalyst for meaningful change &mdash; not just lines of code, but a bridge between bold ideas and real-world impact. Born from a drive to empower ambitious founders, growing businesses, and enterprise teams, we&apos;ve become a trusted partner for brands across India, the Middle East, and North America, delivering high-performance digital products that move the needle.
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                className="text-brand-gray-500 text-[15px] md:text-base leading-[1.85]"
+              >
+                From a tight-knit crew of problem-solvers to a full-service digital studio, our path has always been guided by one conviction &mdash; make technology accessible, scalable, and genuinely useful for the people it serves.
+              </motion.p>
+            </motion.div>
+
+            {/* Divider */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="w-16 h-[1.5px] bg-primary-dark/15 mx-auto my-16 lg:my-20 origin-center"
+            />
+
+            {/* Sub-section 2: What Drives Us */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <h3 className="text-[clamp(1.4rem,3vw,2rem)] font-extrabold leading-[1.2] tracking-tight font-display text-primary-dark mb-8">
+                What Drives Us
+              </h3>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                className="text-brand-gray-500 text-[15px] md:text-base leading-[1.85] mb-6"
+              >
+                We are a collective of engineers, designers, and strategists who believe great products are born at the intersection of craft and curiosity. Our strength is in listening &mdash; deeply understanding each client&apos;s vision, then translating it into a digital experience that resonates, whether that&apos;s a consumer marketplace, an enterprise SaaS platform, a fintech dashboard, or a complete brand ecosystem.
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                className="text-brand-gray-500 text-[15px] md:text-base leading-[1.85]"
+              >
+                We offer both rapid-launch solutions for teams that need speed and fully bespoke builds for those who demand something singular. At DevShuttle, every pixel, every interaction, and every deployment is engineered with a clear purpose &mdash; to help your business thrive in a digital-first world.
+              </motion.p>
+            </motion.div>
+
+          </div>
+        </div>
+
+        {/* Decorative dot grid */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 0.06 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="absolute top-16 right-20 z-0 pointer-events-none"
+        >
+          <svg width="80" height="80" viewBox="0 0 80 80">
+            {Array.from({ length: 36 }).map((_, i) => {
+              const row = Math.floor(i / 6);
+              const col = i % 6;
+              return <circle key={i} cx={col * 14 + 7} cy={row * 14 + 7} r="1.5" fill="currentColor" />;
+            })}
+          </svg>
+        </motion.div>
+      </section>
+
       {/* ─── Section 2: Mission Statement ─── */}
       <section className="relative py-24 md:py-36 border-t border-black/5 overflow-hidden">
         <div className="container-wide">
@@ -215,84 +315,10 @@ export default function AboutPage() {
         </motion.div>
       </section>
 
-      {/* ─── Section 3: Culture & Values ─── */}
-      <section className="relative py-32 lg:py-48 bg-[#f8f8f8]">
-
-
-        {/* Decorative dot grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 0.08 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="absolute top-20 left-[30%] z-0 pointer-events-none"
-        >
-          <svg width="100" height="100" viewBox="0 0 100 100">
-            {Array.from({ length: 64 }).map((_, i) => {
-              const row = Math.floor(i / 8);
-              const col = i % 8;
-              return <circle key={i} cx={col * 12 + 6} cy={row * 12 + 6} r="1.5" fill="currentColor" />;
-            })}
-          </svg>
-        </motion.div>
-
-        <div className="container-wide relative z-10">
-          <div className="flex flex-col lg:flex-row gap-20 lg:gap-32 items-start">
-            {/* Left: Sticky Heading */}
-            <div className="lg:w-5/12 lg:sticky lg:top-40">
-              <motion.h2
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[clamp(2.2rem,5vw,4.5rem)] font-bold leading-[1.05] tracking-tight font-display text-primary-dark"
-              >
-                Our culture, <br />
-                values, and <br />
-                beliefs.
-              </motion.h2>
-            </div>
-
-            {/* Right: Values List */}
-            <div className="lg:w-7/12">
-              {values.map((value, idx) => (
-                <motion.div
-                  key={value.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="mb-20 lg:mb-28 last:mb-0"
-                >
-                  <h3 className="text-xl md:text-2xl font-bold font-display tracking-tight text-primary-dark mb-4">
-                    {value.title}
-                  </h3>
-                  <p className="text-brand-gray-500 text-base md:text-[17px] leading-relaxed max-w-lg">
-                    {value.desc}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 0.2 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="hidden lg:flex absolute right-8 bottom-12 flex-col items-center gap-3 pointer-events-none"
-        >
-          <div className="w-[1px] h-8 bg-primary-dark/30" />
-          <span className="text-[9px] font-bold tracking-[0.3em] uppercase text-primary-dark/40 [writing-mode:vertical-rl]">Scroll</span>
-        </motion.div>
-      </section>
+     
 
       {/* ─── Section 4: Stats ─── */}
-      {/* <section className="bg-white py-20 lg:py-32 border-y border-black/5 relative z-10">
+      <section className="bg-white py-20 lg:py-32 border-y border-black/5 relative z-10">
         <div className="container-wide">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-24">
             {[
@@ -319,9 +345,12 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
-      {/* ─── Section 5: CTA — Accent Sweep ─── */}
+      {/* ─── Section 5: Our Team ─── */}
+      <OurTeam />
+
+      {/* ─── Section 6: CTA — Accent Sweep ─── */}
       <section
         ref={ctaRef}
         className="relative z-30 py-28 lg:py-40 overflow-hidden"
