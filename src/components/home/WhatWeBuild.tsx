@@ -7,34 +7,34 @@ import { TextReveal } from "@/components/animations/TextReveal";
 
 const services = [
   {
-    title: "Business Websites",
-    description: "High-performance marketing websites and landing pages designed to convert.",
+    title: "Launch-Ready Websites",
+    description: "Fast, responsive, conversion-focused websites for startups and growing businesses that need credibility and inbound leads.",
     category: "Web Presence",
   },
   {
-    title: "SaaS MVP Platforms",
-    description: "Full-scale product development from concept to scalable MVP.",
+    title: "SaaS MVPs",
+    description: "Working MVPs for founders who need to validate an idea, onboard users, collect payments, and launch quickly.",
     category: "Product Development",
   },
   {
-    title: "Admin Dashboards",
-    description: "Custom internal tools and reporting systems for business intelligence.",
+    title: "Business Dashboards",
+    description: "Internal dashboards that help teams manage customers, orders, reports, users, workflows, and operational data.",
     category: "Internal Systems",
   },
   {
-    title: "Custom Web Applications",
-    description: "Scalable, secure, and modern web applications for business automation.",
-    category: "Software Development",
+    title: "Client Portals",
+    description: "Secure portals where customers, clients, teams, or partners can log in, access information, submit requests, and track progress.",
+    category: "User Experience",
   },
   {
-    title: "CRM Systems",
-    description: "Tailored customer relationship management tools for startup growth.",
+    title: "Booking & Workflow Systems",
+    description: "Custom systems for appointments, service requests, task flows, reminders, payments, and admin management.",
     category: "Operations",
   },
   {
-    title: "Client Portals",
-    description: "Secure, role-based platforms for customer management and communication.",
-    category: "User Experience",
+    title: "Custom Web Applications",
+    description: "Business-specific web platforms built around your workflows, users, data, and long-term growth needs.",
+    category: "Software Development",
   },
 ];
 
@@ -50,18 +50,18 @@ export default function WhatWeBuild() {
         <div className="flex flex-col lg:flex-row justify-between items-start mb-24 lg:mb-40 gap-16">
           <div className="max-w-3xl">
              <span className="eyebrow">What We Build</span>
-             <h2 className="text-section-title text-white !leading-[1.1] mb-10">
-                <TextReveal delay={0.1}>Engineering custom software</TextReveal> <br />
-                <TextReveal delay={0.3} className="text-accent/80">solutions for startups.</TextReveal>
+             <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-display font-bold text-white leading-[1.05] tracking-tight mb-8">
+                <TextReveal delay={0.1}>Software solutions for startups</TextReveal> <br />
+                <TextReveal delay={0.3} className="text-accent/80">and growing businesses.</TextReveal>
              </h2>
-             <div className="text-xl text-brand-gray-500 leading-relaxed font-light text-balance mb-12">
+             <div className="text-lg md:text-xl text-brand-gray-500 leading-relaxed font-light text-balance mb-12">
                 <TextReveal delay={0.5} wordStagger={0.02}>
-                   We specialize in building the technical infrastructure that high-growth businesses depend on. From customer-facing marketing sites to complex internal platforms.
+                   We build digital products that help businesses launch faster, generate leads, automate workflows, manage operations, and serve users better.
                 </TextReveal>
              </div>
              
              <Link href="/services" className="btn-premium w-fit py-5 px-12 group">
-                <span>Explore All Services</span>
+                <span>Explore All Solutions</span>
                 <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1.5" />
              </Link>
           </div>

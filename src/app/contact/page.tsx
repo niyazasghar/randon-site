@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Phone, MapPin, Linkedin, Twitter, Github, Instagram, Terminal } from "lucide-react";
+import { ArrowRight, Mail, Phone, MapPin, Linkedin, Twitter, Github, Instagram, Terminal, ChevronDown } from "lucide-react";
 
 export default function ContactPage() {
   const containerVariants = {
@@ -46,9 +46,10 @@ export default function ContactPage() {
                 transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="text-[clamp(2.5rem,7vw,5.5rem)] font-bold leading-[1] tracking-tighter font-display text-primary-dark"
               >
-                Let's build <br />
-                your technical <br />
-                future together.
+                Let&apos;s build your <br />
+                next website, MVP, <br />
+                dashboard, or <br />
+                custom platform.
               </motion.h1>
             </div>
             <div className="lg:w-5/12">
@@ -58,7 +59,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 className="text-brand-gray-500 text-base md:text-lg leading-relaxed max-w-sm"
               >
-                Whether you're starting from scratch or scaling an existing product, our engineering team is ready to help you navigate your technical challenge.
+                Whether you are launching a startup, rebuilding an old system, or creating a custom business tool, DevShuttle can help you plan and build the right technical solution.
               </motion.p>
               <motion.div
                 initial={{ scaleX: 0 }}
@@ -114,7 +115,7 @@ export default function ContactPage() {
                         Tell us about your project.
                       </h2>
                       <p className="text-brand-gray-500 text-[15px] md:text-base leading-[1.85]">
-                         Please fill out the form below and we'll get back to you within 24 hours to schedule a deep-dive call into your requirements.
+                         Share what you want to build, what problem you are trying to solve, and where you are in the process. We will help you understand the right next step.
                       </p>
                    </motion.div>
 
@@ -124,7 +125,7 @@ export default function ContactPage() {
                          <input 
                            type="text" 
                            placeholder="John Doe" 
-                           className="bg-transparent border-b border-brand-gray-200 py-4 text-primary-dark text-lg focus:outline-none focus:border-accent transition-colors"
+                           className="bg-transparent border-b border-brand-gray-200 py-4 text-primary-dark text-lg focus:outline-none focus:border-accent transition-colors w-full"
                          />
                       </motion.div>
                       
@@ -133,32 +134,72 @@ export default function ContactPage() {
                          <input 
                            type="email" 
                            placeholder="john@example.com" 
-                           className="bg-transparent border-b border-brand-gray-200 py-4 text-primary-dark text-lg focus:outline-none focus:border-accent transition-colors"
+                           className="bg-transparent border-b border-brand-gray-200 py-4 text-primary-dark text-lg focus:outline-none focus:border-accent transition-colors w-full"
                          />
                       </motion.div>
 
-                      <motion.div variants={itemVariants} className="flex flex-col gap-3 group sm:col-span-2">
-                         <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-brand-gray-400 transition-colors group-hover:text-accent">Estimated Project Budget</label>
+                      <motion.div variants={itemVariants} className="flex flex-col gap-3 group">
+                         <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-brand-gray-400 transition-colors group-hover:text-accent">Company</label>
+                         <input 
+                           type="text" 
+                           placeholder="Your Company" 
+                           className="bg-transparent border-b border-brand-gray-200 py-4 text-primary-dark text-lg focus:outline-none focus:border-accent transition-colors w-full"
+                         />
+                      </motion.div>
+
+                      <motion.div variants={itemVariants} className="flex flex-col gap-3 group">
+                         <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-brand-gray-400 transition-colors group-hover:text-accent">Project Type</label>
+                         <div className="relative">
+                            <select 
+                              defaultValue=""
+                              className="bg-transparent border-b border-brand-gray-200 py-4 text-primary-dark text-lg focus:outline-none focus:border-accent transition-colors w-full appearance-none pr-10 cursor-pointer"
+                            >
+                               <option value="" disabled>Select project type...</option>
+                               <option value="Business Website">Business Website</option>
+                               <option value="Startup Landing Page">Startup Landing Page</option>
+                               <option value="SaaS MVP">SaaS MVP</option>
+                               <option value="Web Application">Web Application</option>
+                               <option value="Admin Dashboard">Admin Dashboard</option>
+                               <option value="Client Portal">Client Portal</option>
+                               <option value="Booking / Workflow System">Booking / Workflow System</option>
+                               <option value="App Modernization">App Modernization</option>
+                               <option value="Not Sure Yet">Not Sure Yet</option>
+                            </select>
+                            <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-5 h-5 text-brand-gray-400 pointer-events-none" />
+                         </div>
+                      </motion.div>
+
+                      <motion.div variants={itemVariants} className="flex flex-col gap-3 group">
+                         <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-brand-gray-400 transition-colors group-hover:text-accent">Budget Range</label>
                          <input 
                            type="text" 
                            placeholder="$10k - $20k" 
-                           className="bg-transparent border-b border-brand-gray-200 py-4 text-primary-dark text-lg focus:outline-none focus:border-accent transition-colors"
+                           className="bg-transparent border-b border-brand-gray-200 py-4 text-primary-dark text-lg focus:outline-none focus:border-accent transition-colors w-full"
+                         />
+                      </motion.div>
+
+                      <motion.div variants={itemVariants} className="flex flex-col gap-3 group">
+                         <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-brand-gray-400 transition-colors group-hover:text-accent">Timeline</label>
+                         <input 
+                           type="text" 
+                           placeholder="e.g. 1-2 months" 
+                           className="bg-transparent border-b border-brand-gray-200 py-4 text-primary-dark text-lg focus:outline-none focus:border-accent transition-colors w-full"
                          />
                       </motion.div>
 
                       <motion.div variants={itemVariants} className="flex flex-col gap-3 group sm:col-span-2">
-                         <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-brand-gray-400 transition-colors group-hover:text-accent">Project Details</label>
+                         <label className="text-[10px] uppercase font-bold tracking-[0.3em] text-brand-gray-400 transition-colors group-hover:text-accent">Project Description</label>
                          <textarea 
-                           placeholder="Describe your vision, tech stack requirements, and goals." 
+                           placeholder="Describe your vision, technical requirements, and goals." 
                            rows={4}
-                           className="bg-transparent border-b border-brand-gray-200 py-4 text-primary-dark text-lg focus:outline-none focus:border-accent transition-colors resize-none"
+                           className="bg-transparent border-b border-brand-gray-200 py-4 text-primary-dark text-lg focus:outline-none focus:border-accent transition-colors resize-none w-full"
                          />
                       </motion.div>
                       
                       <motion.div variants={itemVariants} className="sm:col-span-2 pt-10">
                          <button className="group relative inline-flex items-center justify-center gap-3 w-full py-5 rounded-full text-sm font-bold tracking-wide uppercase overflow-hidden active:scale-[0.98] transition-transform duration-300 bg-primary-dark">
                             <span className="absolute inset-0 bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out rounded-full" />
-                            <span className="relative z-10 text-white">Send Inquiry</span>
+                            <span className="relative z-10 text-white">Start Your Project</span>
                             <ArrowRight className="relative z-10 w-5 h-5 text-white group-hover:translate-x-2 transition-transform duration-300" />
                          </button>
                       </motion.div>
@@ -178,11 +219,11 @@ export default function ContactPage() {
                          <span className="hover-line">hello@devshuttle.com</span>
                       </a>
                       
-                      <a href="tel:+1234567890" className="group flex items-center gap-6 text-xl lg:text-2xl font-display font-medium text-primary-dark">
+                      <a href="mailto:niyazasghar12@gmail.com" className="group flex items-center gap-6 text-xl lg:text-2xl font-display font-medium text-primary-dark break-all">
                          <div className="w-12 h-12 flex items-center justify-center border border-brand-gray-200 rounded-full group-hover:bg-accent group-hover:border-accent transition-all duration-300 shrink-0">
-                            <Phone className="w-5 h-5 text-primary-dark group-hover:text-white transition-colors" />
+                            <Mail className="w-5 h-5 text-primary-dark group-hover:text-white transition-colors" />
                          </div>
-                         <span className="hover-line">+91 (India) Head Office</span>
+                         <span className="hover-line">niyazasghar12@gmail.com</span>
                       </a>
                    </div>
                 </div>
@@ -206,9 +247,9 @@ export default function ContactPage() {
                    <div className="w-10 h-10 flex items-center justify-center bg-accent/10 border border-accent/20 rounded-lg mb-6">
                       <Terminal className="w-5 h-5 text-accent" />
                    </div>
-                   <h4 className="text-xl font-bold text-primary-dark mb-4 uppercase tracking-tighter">Engineering Led</h4>
+                   <h4 className="text-xl font-bold text-primary-dark mb-4 uppercase tracking-tighter">Engineering-led from planning to deployment.</h4>
                    <p className="text-brand-gray-500 text-[15px] leading-[1.85]">
-                      Directed by senior software architects with computer science backgrounds. We handle the mission-critical technical layer of your brand.
+                      DevShuttle helps founders and growing businesses handle the technical layer of their digital product, from product planning and architecture to development, deployment, and post-launch support.
                    </p>
                 </div>
              </div>
@@ -223,11 +264,10 @@ export default function ContactPage() {
             <span className="inline-block text-accent font-bold tracking-[0.25em] text-[10px] uppercase mb-8">Studio Location</span>
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-[clamp(1.5rem,3vw,2rem)] font-display font-extrabold text-primary-dark opacity-80">
                <MapPin className="w-8 h-8 text-accent shrink-0" />
-               <span>REMOTE WORLDWIDE · HEADQUARTERS IN INDIA</span>
+               <span>REMOTE WORLDWIDE, HEADQUARTERED IN INDIA</span>
             </div>
          </div>
       </section>
     </div>
   );
 }
-

@@ -7,23 +7,31 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     question: "How long does a typical project take?",
-    answer: "A standard marketing website usually takes 3-4 weeks, while a complex SaaS MVP or custom web application can take 8-12 weeks depending on scope and integrations.",
+    answer: "Most website projects take 2 to 6 weeks. MVPs, dashboards, portals, and custom web applications usually take 4 to 12 weeks depending on scope, features, integrations, and feedback speed.",
   },
   {
     question: "Do you offer fixed-price projects?",
-    answer: "Yes, we typically work on a fixed-scope, fixed-price basis for well-defined projects to ensure transparency and predictability for both parties.",
+    answer: "Yes. For clearly defined websites, landing pages, MVPs, and dashboards, we can work with fixed-scope pricing. Larger or evolving products are usually better handled through milestone-based development.",
   },
   {
     question: "What technologies do you specialize in?",
-    answer: "We are experts in Next.js, React, and Tailwind for the front-end, and FastAPI or Spring Boot for high-performance back-ends. We also specialize in PostgreSQL, MongoDB, and AWS infrastructure.",
+    answer: "We work with modern full-stack technologies including Next.js, React, TypeScript, Node.js, PostgreSQL, MongoDB, Firebase, Supabase, AWS, Vercel, Stripe, and related cloud tools.",
+  },
+  {
+    question: "Can you build SaaS MVPs?",
+    answer: "Yes. We build SaaS MVPs with user authentication, dashboards, database architecture, payments, admin panels, and deployment setup.",
   },
   {
     question: "Can you help with app modernization?",
-    answer: "Absolutely. We specialize in legacy system audits and migrating legacy monolithic applications to modern, scalable cloud architectures while improving the UI/UX.",
+    answer: "Yes. We can audit, rebuild, or modernize outdated websites, dashboards, portals, and web applications using a cleaner and more scalable architecture.",
   },
   {
     question: "Do you provide post-launch support?",
-    answer: "Yes, we offer ongoing maintenance and support contracts to ensure your digital product stays secure, performant, and up-to-date with the latest tech standards.",
+    answer: "Yes. We offer post-launch support for bug fixes, improvements, monitoring, performance updates, and ongoing feature development.",
+  },
+  {
+    question: "Can you help if I only have an idea?",
+    answer: "Yes. We can help you turn your idea into a clear scope, feature list, technical roadmap, and development plan.",
   },
 ];
 
@@ -35,12 +43,12 @@ export default function FAQ() {
       <div className="container-wide">
         <div className="max-w-6xl mx-auto">
           <div className="mb-24 text-center lg:text-left transition-all">
-            <span className="eyebrow !text-accent/60">Common Questions</span>
-            <h2 className="text-section-title text-brand-gray-900 !leading-none mb-10">
-              Clear answers for curious founders.
+            <span className="eyebrow !text-accent/60">FAQ</span>
+            <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-display font-bold text-primary-dark leading-[1.05] tracking-tight mb-8">
+              Clear answers for founders <br className="hidden lg:block" /> and business owners.
             </h2>
-            <p className="text-xl text-brand-gray-500 max-w-2xl leading-relaxed font-light">
-               Everything you need to know about our process, pricing, and how we build the technical future of your startup.
+            <p className="text-lg md:text-xl text-brand-gray-500 max-w-3xl leading-[1.8] font-light">
+               Everything you need to know about our process, pricing, timelines, technology, and support before starting your project.
             </p>
           </div>
 

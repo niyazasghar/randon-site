@@ -3,13 +3,13 @@ export default function TermsPage() {
     <div className="bg-background-dark min-h-screen pt-40 lg:pt-56 pb-32 font-light">
       <section className="container-wide mb-24 lg:mb-32">
         <div className="max-w-4xl">
-          <span className="eyebrow">Legal Framework</span>
+          <span className="eyebrow">Legal</span>
           <h1 className="text-4xl md:text-6xl font-display font-extrabold text-white mb-10 leading-none tracking-tighter">
             Terms & <br />
             <span className="text-brand-gray-700">Conditions.</span>
           </h1>
           <p className="text-xl text-brand-gray-500 max-w-2xl leading-relaxed">
-            Please read these terms carefully before engaging with DevShuttle Studio. By using our services, you agree to the conditions outlined below.
+            Please read these terms carefully before starting a project with DevShuttle Studio.
           </p>
         </div>
       </section>
@@ -20,35 +20,56 @@ export default function TermsPage() {
              <div>
                 <h2 className="text-white font-bold text-xl uppercase tracking-widest mb-6">1. Engagement Policy</h2>
                 <p>
-                  Engaging with DevShuttle requires a formal agreement or statement of work (SOW) signed by both parties. All projects are built on an engineering-led roadmap with clear milestones.
+                  All projects begin with a defined scope, timeline, deliverables, and payment structure agreed upon by both parties.
                 </p>
              </div>
 
              <div>
-                <h2 className="text-white font-bold text-xl uppercase tracking-widest mb-6">2. Intellectual Property</h2>
+                <h2 className="text-white font-bold text-xl uppercase tracking-widest mb-6">2. Project Scope</h2>
                 <p>
-                  Unless otherwise specified in the project agreement, full intellectual property rights to the custom source code developed for the client are transferred upon final payment settlement.
+                  Only the features, pages, integrations, and deliverables listed in the approved scope are included in the project.
                 </p>
              </div>
 
              <div>
-                <h2 className="text-white font-bold text-xl uppercase tracking-widest mb-6">3. Payment & Milestones</h2>
+                <h2 className="text-white font-bold text-xl uppercase tracking-widest mb-6">3. Changes & Revisions</h2>
                 <p>
-                  Payments are typically structured around project milestones (e.g., Discovery, Beta, Final Launch). Invoices are due within 14 days of issuance unless otherwise agreed.
+                  Additional features, major revisions, or scope changes may require extra time and additional charges.
                 </p>
              </div>
 
              <div>
-                <h2 className="text-white font-bold text-xl uppercase tracking-widest mb-6">4. Limitation of Liability</h2>
+                <h2 className="text-white font-bold text-xl uppercase tracking-widest mb-6">4. Intellectual Property</h2>
                 <p>
-                  DevShuttle provides high-performance technical engineering, but we are not liable for business losses, data breaches on third-party hosting, or external API failures beyond our direct code control.
+                  Ownership of final deliverables is transferred according to the agreed proposal or contract after full payment is completed.
                 </p>
              </div>
 
              <div>
-                <h2 className="text-white font-bold text-xl uppercase tracking-widest mb-6">5. Governing Law</h2>
+                <h2 className="text-white font-bold text-xl uppercase tracking-widest mb-6">5. Payment & Milestones</h2>
                 <p>
-                   These terms are governed by the laws of India. Any disputes arising from these terms will be settled in the jurisdiction of the courts in [Your City/State].
+                  Projects may be billed through fixed-price, milestone-based, or custom payment structures. Work may pause if agreed payments are delayed.
+                </p>
+             </div>
+
+             <div>
+                <h2 className="text-white font-bold text-xl uppercase tracking-widest mb-6">6. Client Responsibilities</h2>
+                <p>
+                  Clients are responsible for providing required content, feedback, approvals, access, and third-party account details on time.
+                </p>
+             </div>
+
+             <div>
+                <h2 className="text-white font-bold text-xl uppercase tracking-widest mb-6">7. Limitation of Liability</h2>
+                <p>
+                  DevShuttle is not responsible for losses caused by third-party platforms, hosting providers, client-side changes, unsupported modifications, or misuse of delivered systems.
+                </p>
+             </div>
+
+             <div>
+                <h2 className="text-white font-bold text-xl uppercase tracking-widest mb-6">8. Governing Law</h2>
+                <p>
+                  The governing law and dispute process should be defined clearly in the final agreement between DevShuttle and the client.
                 </p>
              </div>
           </div>

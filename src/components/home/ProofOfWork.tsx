@@ -69,25 +69,25 @@ export default function ProofOfWork() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
             className="eyebrow !text-accent/60"
           >
-            Social Presence
+            From Idea to Working Product
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
-            className="text-section-title text-brand-gray-900 !leading-none mb-10"
+            className="text-[clamp(2rem,4vw,3.5rem)] font-display font-bold text-primary-dark leading-[1.1] mb-10"
           >
-            Turning Visions Into Digital Reality.
+            We turn business ideas into usable digital systems.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] as const }}
-            className="text-xl text-brand-gray-500 max-w-2xl leading-relaxed font-light"
+            className="text-lg md:text-xl text-brand-gray-500 max-w-3xl leading-[1.8] font-light"
           >
-            A showcase of the brands and startups we&apos;ve helped bring to life with modern, scalable digital products.
+            We help founders and business owners move from scattered ideas, outdated websites, spreadsheets, and manual workflows to clean, scalable, production-ready digital products.
           </motion.p>
         </div>
 
@@ -127,7 +127,7 @@ export default function ProofOfWork() {
         <div className="flex animate-marquee-left whitespace-nowrap">
           {[...Array(10)].map((_, i) => (
             <div key={i} className="flex shrink-0 items-center gap-0">
-              {["Develop it from Best", "Develop it Once"].map((text, j) => (
+              {["Plan it right", "Build it once", "Launch with confidence", "Scale without chaos"].map((text, j) => (
                 <span key={j} className="flex items-center">
                   <span className="text-sm font-semibold tracking-wide text-white/90 px-4">
                     {text}

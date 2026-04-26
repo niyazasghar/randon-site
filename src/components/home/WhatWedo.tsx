@@ -42,9 +42,9 @@ export default function WhatWedo() {
               delay: 0.5,
               ease: [0.16, 1, 0.3, 1] as const,
             }}
-            className="inline-block  text-eyebrow uppercase tracking-[0.25em] text-white/70 mb-8"
+            className="inline-block text-eyebrow uppercase tracking-[0.25em] text-white/70 mb-8"
           >
-            A Digital Agency
+            Engineering-Led Studio
           </motion.span>
 
           {/* Main text */}
@@ -57,12 +57,9 @@ export default function WhatWedo() {
               delay: 0.5,
               ease: [0.16, 1, 0.3, 1] as const,
             }}
-            className="text-2xl  sm:text-3xl md:text-4xl lg:text-[2.75rem] font-display font-bold text-white leading-snug tracking-[-0.01em]"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-display font-bold text-white leading-snug tracking-[-0.01em]"
           >
-            We are a web design and development company, building websites that
-            drive traffic, engagement, and conversion for industry-leading brands
-            and startups.
-            {/* <span className="inline-block ml-2 align-middle">🚀</span> */}
+            We help startups launch faster and growing businesses replace messy manual work with scalable websites, MVPs, dashboards, and custom web applications.
           </motion.p>
         </div>
       </div>

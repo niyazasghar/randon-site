@@ -78,12 +78,12 @@ export default function ContactSection() {
             transition={{ duration: 0.8 }}
           >
             <span className="eyebrow !mb-10">Contact Us</span>
-            <h2 className="text-section-title text-white mb-10 !leading-[1.1]">
+            <h2 className="text-[clamp(2.5rem,4vw,3.5rem)] font-display font-bold text-white mb-10 leading-[1.1] tracking-tight">
                Ready to build your <br />
-               <span className="text-brand-gray-700">next digital product?</span>
+               <span className="text-accent">next digital product?</span>
             </h2>
-            <p className="text-xl text-brand-gray-400 mb-16 max-w-xl leading-relaxed font-light">
-              Whether you need a premium marketing website, a scalable web app, or a modern mobile experience, we're here to help you build it.
+            <p className="text-lg md:text-xl text-brand-gray-400 mb-16 max-w-xl leading-relaxed font-light">
+              Tell us what you are trying to build. We will help you clarify the scope, choose the right technical direction, and plan the best way to launch.
             </p>
 
             <div className="flex flex-col gap-10">
@@ -93,7 +93,10 @@ export default function ContactSection() {
                 </div>
                 <div>
                    <span className="text-[10px] uppercase tracking-widest text-brand-gray-600 block mb-1">Email Us Directly</span>
-                   <a href="mailto:niyazasghar12@gmail.com" className="text-xl font-bold text-white hover:text-accent transition-colors">
+                   <a href="mailto:hello@devshuttle.com" className="text-xl font-bold text-white hover:text-accent transition-colors block mb-1">
+                      hello@devshuttle.com
+                   </a>
+                   <a href="mailto:niyazasghar12@gmail.com" className="text-sm font-semibold text-brand-gray-500 hover:text-white transition-colors">
                       niyazasghar12@gmail.com
                    </a>
                 </div>
@@ -104,9 +107,9 @@ export default function ContactSection() {
                    <MapPin className="w-6 h-6 text-brand-gray-400 group-hover:text-white transition-colors" />
                 </div>
                 <div>
-                   <span className="text-[10px] uppercase tracking-widest text-brand-gray-600 block mb-1">Studio Location</span>
+                   <span className="text-[10px] uppercase tracking-widest text-brand-gray-600 block mb-1">Location</span>
                    <span className="text-xl font-bold text-white transition-colors">
-                      Based in India · Serving Globally
+                      Based in India, serving globally
                    </span>
                 </div>
               </div>
@@ -162,7 +165,7 @@ export default function ContactSection() {
                    disabled={isSubmitting}
                    className="btn-premium w-full py-6 text-lg group disabled:opacity-50"
                 >
-                   <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
+                   <span>{isSubmitting ? "Sending..." : "Book a Project Discussion"}</span>
                    <Send className={`w-5 h-5 transition-transform ${isSubmitting ? "" : "group-hover:translate-x-1.5 group-hover:-translate-y-1"}`} />
                 </button>
              </form>

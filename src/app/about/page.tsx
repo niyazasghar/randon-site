@@ -8,20 +8,20 @@ import { useRef } from "react";
 
 const values = [
   {
-    title: "Forward-Thinking",
-    desc: "We pride ourselves on pushing the boundaries of digital design and development. We combine relevant trends and best practices to build platforms with longevity.",
+    title: "Business-First Engineering",
+    desc: "Every project starts with the business problem, not the technology. We build systems that earn trust, generate leads, and make operations easier.",
   },
   {
-    title: "Constant Growth",
-    desc: "Our team is composed of ambitious creatives and strategists; each member is dedicated to perfecting their craft and taking brands to the next level.",
+    title: "Scope Discipline",
+    desc: "We define exactly what will be built and what will not. Clear scope means faster delivery, fewer surprises, and better outcomes.",
   },
   {
-    title: "Detail-Oriented",
-    desc: "We sweat the small stuff, because we believe that the details make the design. A time-tested and true platform values quality over quantity.",
+    title: "Launch-Ready Quality",
+    desc: "We focus on performance, security, and scalability from day one. Every product we ship is production-ready, not a prototype.",
   },
   {
-    title: "Great Character",
-    desc: "More than skill, drive, or experience, great work is rooted in great character. We value integrity, honesty, and mutual respect above all.",
+    title: "Long-Term Thinking",
+    desc: "We build clean, maintainable systems designed to grow with your business. No shortcuts, no tech debt traps.",
   },
 ];
 
@@ -68,9 +68,9 @@ export default function AboutPage() {
                 transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="text-[clamp(2.5rem,7vw,5.5rem)] font-bold leading-[1] tracking-tighter font-display text-primary-dark"
               >
-                A passionate <br />
-                team, rooted in <br />
-                digital.
+                An engineering-led <br />
+                studio for startups <br />
+                and growing businesses.
               </motion.h1>
             </div>
 
@@ -82,7 +82,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 className="text-brand-gray-500 text-base md:text-lg leading-relaxed max-w-sm"
               >
-                Building great things in the heart of innovation. We&apos;re a digital agency that combines design thinking with technical excellence.
+                DevShuttle helps founders and business owners turn ideas, workflows, and growth challenges into modern websites, SaaS MVPs, dashboards, portals, and custom web applications.
               </motion.p>
               <motion.div
                 initial={{ scaleX: 0 }}
@@ -138,7 +138,7 @@ export default function AboutPage() {
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             >
               <h2 className="text-[clamp(1.6rem,4vw,2.5rem)] font-extrabold leading-[1.15] tracking-tight font-display text-primary-dark mb-8">
-                Shaping the Digital Landscape
+                We build digital products that solve real business problems.
               </h2>
 
               <motion.p
@@ -148,7 +148,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
                 className="text-brand-gray-500 text-[15px] md:text-base leading-[1.85] mb-6"
               >
-                At DevShuttle, we see technology as a catalyst for meaningful change &mdash; not just lines of code, but a bridge between bold ideas and real-world impact. Born from a drive to empower ambitious founders, growing businesses, and enterprise teams, we&apos;ve become a trusted partner for brands across India, the Middle East, and North America, delivering high-performance digital products that move the needle.
+                DevShuttle is a software development studio focused on helping startups and growing businesses build practical, scalable, and launch-ready digital products.
               </motion.p>
 
               <motion.p
@@ -158,7 +158,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
                 className="text-brand-gray-500 text-[15px] md:text-base leading-[1.85]"
               >
-                From a tight-knit crew of problem-solvers to a full-service digital studio, our path has always been guided by one conviction &mdash; make technology accessible, scalable, and genuinely useful for the people it serves.
+                We work with founders, service businesses, and growing teams that need more than a basic website. Whether you are launching a startup, replacing manual workflows, building an internal dashboard, or creating a client-facing platform, we help you move from idea to execution with clarity.
               </motion.p>
             </motion.div>
 
@@ -179,7 +179,7 @@ export default function AboutPage() {
               transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             >
               <h3 className="text-[clamp(1.4rem,3vw,2rem)] font-extrabold leading-[1.2] tracking-tight font-display text-primary-dark mb-8">
-                What Drives Us
+                Product thinking backed by engineering discipline.
               </h3>
 
               <motion.p
@@ -189,7 +189,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="text-brand-gray-500 text-[15px] md:text-base leading-[1.85] mb-6"
               >
-                We are a collective of engineers, designers, and strategists who believe great products are born at the intersection of craft and curiosity. Our strength is in listening &mdash; deeply understanding each client&apos;s vision, then translating it into a digital experience that resonates, whether that&apos;s a consumer marketplace, an enterprise SaaS platform, a fintech dashboard, or a complete brand ecosystem.
+                We combine software engineering, product strategy, and modern design to build systems that are clean, maintainable, and useful in the real world.
               </motion.p>
 
               <motion.p
@@ -199,7 +199,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 className="text-brand-gray-500 text-[15px] md:text-base leading-[1.85]"
               >
-                We offer both rapid-launch solutions for teams that need speed and fully bespoke builds for those who demand something singular. At DevShuttle, every pixel, every interaction, and every deployment is engineered with a clear purpose &mdash; to help your business thrive in a digital-first world.
+                Our process focuses on clarity, scope control, performance, security, and long-term scalability.
               </motion.p>
             </motion.div>
 
@@ -235,7 +235,7 @@ export default function AboutPage() {
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="inline-block text-primary-dark/40 font-bold tracking-[0.25em] text-[10px] uppercase mb-8"
             >
-              A Digital Agency
+              Our Mission
             </motion.span>
 
             <motion.h2
@@ -245,8 +245,8 @@ export default function AboutPage() {
               transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="text-[clamp(2rem,5vw,4rem)] font-bold leading-[1.1] tracking-tight font-display text-primary-dark mb-14"
             >
-              Building great websites for <br className="hidden md:block" />
-              industry-leading brands.
+              To help startups and growing businesses <br className="hidden md:block" />
+              launch faster, operate better, and scale confidently.
             </motion.h2>
 
             {/* Our Work Button */}
@@ -261,7 +261,7 @@ export default function AboutPage() {
                 className="group relative inline-flex items-center gap-3 px-8 py-3.5 rounded-full text-xs font-bold tracking-wide uppercase overflow-hidden active:scale-[0.98] transition-transform duration-300 bg-primary-dark"
               >
                 <span className="absolute inset-0 bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out rounded-full" />
-                <span className="relative z-10 text-white">Our Work</span>
+                <span className="relative z-10 text-white">View Our Work</span>
                 <svg className="relative z-10 w-3.5 h-3.5 text-white group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -323,9 +323,9 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-24">
             {[
               { label: "Founded by", value: "IIIT Graduate" },
-              { label: "Technical Standard", value: "Modern Stack" },
-              { label: "Deployment Speed", value: "4-12 Weeks" },
-              { label: "Software Support", value: "24/7 Monitoring" },
+              { label: "Technical Focus", value: "Full-Stack Web Dev" },
+              { label: "Typical Delivery", value: "2 to 12 Weeks" },
+              { label: "Support", value: "Post-Launch Available" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -387,11 +387,11 @@ export default function AboutPage() {
               transition={{ duration: 0.9, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-display font-bold text-white leading-snug tracking-[-0.01em] mb-12"
             >
-              Let&apos;s work together to <br className="hidden md:block" />
-              build something great.
+              Have a website, MVP, dashboard, <br className="hidden md:block" />
+              or platform idea?
             </motion.p>
 
-            {/* Say Hello Button */}
+            {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -403,7 +403,7 @@ export default function AboutPage() {
                 className="group relative inline-flex items-center gap-3 px-10 py-4 rounded-full text-sm font-bold tracking-wide uppercase overflow-hidden active:scale-[0.98] transition-transform duration-300 border border-white/20"
               >
                 <span className="absolute inset-0 bg-white/[0.08] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out rounded-full" />
-                <span className="relative z-10 text-white">Say Hello</span>
+                <span className="relative z-10 text-white">Let&apos;s Build It Right</span>
                 <svg className="relative z-10 w-4 h-4 text-white group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

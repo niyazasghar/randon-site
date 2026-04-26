@@ -66,18 +66,27 @@ export default function OurTeam() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
-            className="text-section-title text-brand-gray-900 !leading-none mb-10"
+            className="text-[clamp(2.5rem,5vw,4.5rem)] font-display font-bold text-primary-dark leading-[1.05] tracking-tight mb-8"
           >
-            Team Behind Wonders.
+            The team behind your <br className="hidden lg:block" /> product build.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] as const }}
-            className="text-xl text-brand-gray-500 max-w-2xl leading-relaxed font-light"
+            className="text-lg md:text-xl text-brand-gray-500 max-w-3xl leading-[1.8] font-light mb-4"
           >
-            The passionate engineers, designers, and strategists powering every project we deliver.
+            DevShuttle brings together software engineering, product thinking, and modern design to build digital products that are practical, scalable, and ready for business use.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] as const }}
+            className="text-lg md:text-xl text-brand-gray-500 max-w-3xl leading-[1.8] font-light"
+          >
+            We are not here to just write code. We help you clarify the product, plan the right features, build the technical foundation, and launch with confidence.
           </motion.p>
         </div>
 

@@ -1,38 +1,38 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Play, VolumeX } from "lucide-react";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
     name: "Muktesh Narula",
     company: "DOVESOFT",
-    image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=400&h=600",
+    quote: "They understood exactly what our business needed. DevShuttle didn't just write code; they helped us reduce manual work and automate our core operations.",
   },
   {
     name: "Shriya Sadneni",
     company: "MURZBAN",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=600",
+    quote: "Our new website launched much faster than we expected. It's clean, fast, and has already improved our lead flow and customer experience.",
   },
   {
     name: "Yash Goswami",
     company: "BITEBEE FOUNDER",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=600",
+    quote: "Building our MVP with them was the best technical decision we made. We avoided months of wasted time and launched a product our users actually want.",
   },
   {
     name: "Ajay Agarwal",
     company: "AVEENA CO-FOUNDER",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400&h=600",
+    quote: "Their engineering discipline is incredible. The dashboard they built completely replaced our messy spreadsheets with a clean, scalable system.",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="pt-16 pb-32 lg:pt-24 lg:pb-44 relative z-10 bg-white">
+    <section className="pt-16 pb-32 lg:pt-24 lg:pb-44 relative z-10 bg-brand-gray-50">
       <div className="container-wide flex flex-col items-center">
 
         {/* Section heading */}
-        <div className="mb-24 w-full max-w-6xl text-center lg:text-left transition-all">
+        <div className="mb-20 w-full max-w-6xl text-center lg:text-left transition-all">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -47,23 +47,23 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
-            className="text-section-title text-brand-gray-900 !leading-none mb-10"
+            className="text-[clamp(2.5rem,5vw,4.5rem)] font-display font-bold text-primary-dark leading-[1.05] tracking-tight mb-8"
           >
-            Happy Clients Testimonials.
+            Trusted by founders <br className="hidden lg:block" /> and growing teams.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] as const }}
-            className="text-xl text-brand-gray-500 max-w-2xl leading-relaxed font-light"
+            className="text-lg md:text-xl text-brand-gray-500 max-w-3xl leading-[1.8] font-light"
           >
-            Hear from the founders and teams who trusted us to build their digital products.
+            Hear from clients who worked with DevShuttle to launch websites, MVPs, dashboards, portals, and custom software systems.
           </motion.p>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl mx-auto">
           {testimonials.map((testimonial, idx) => (
             <motion.div
               key={testimonial.name}
@@ -75,35 +75,22 @@ export default function Testimonials() {
                 delay: idx * 0.1,
                 ease: [0.16, 1, 0.3, 1] as const,
               }}
-              className="relative aspect-[9/16]  overflow-hidden group cursor-pointer"
+              className="bg-white border border-brand-gray-200 rounded-2xl p-10 lg:p-12 shadow-sm hover:shadow-xl transition-shadow duration-300 relative"
             >
-              <img
-                src={testimonial.image}
-                alt={testimonial.name}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-
-              {/* Gradient Overlay for Text */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
-
-              {/* Top Icons */}
-              <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-10">
-                <div className="bg-black/30 backdrop-blur-md p-2 rounded-full">
-                  <Play className="w-4 h-4 text-white fill-white" />
-                </div>
-                <div className="bg-white/20 backdrop-blur-md p-2 rounded-full">
-                  <VolumeX className="w-4 h-4 text-white" />
-                </div>
-              </div>
-
-              {/* Bottom Info */}
-              <div className="absolute bottom-6 left-6 right-6 z-10">
-                <h3 className="text-white font-display font-bold text-lg mb-1">
-                  {testimonial.name}
-                </h3>
-                <p className="text-white/70 text-xs font-semibold tracking-wider uppercase">
-                  {testimonial.company}
+              <Quote className="absolute top-10 right-10 w-12 h-12 text-brand-gray-100 rotate-180" />
+              <div className="relative z-10 flex flex-col h-full">
+                <p className="text-xl lg:text-2xl font-display font-medium text-primary-dark leading-relaxed mb-10">
+                  "{testimonial.quote}"
                 </p>
+                <div className="mt-auto pt-8 border-t border-brand-gray-100 flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center font-bold text-accent">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-primary-dark tracking-tight">{testimonial.name}</h4>
+                    <p className="text-xs font-bold uppercase tracking-wider text-brand-gray-400 mt-1">{testimonial.company}</p>
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
